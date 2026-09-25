@@ -1,0 +1,155 @@
+<mxfile host="app.diagrams.net" agent="5.0" pages="3">
+  <diagram name="Оформление заказа" id="order-activity-diagram-ru">
+    <mxGraphModel dx="2269" dy="1244" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1754" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="20" width="20" x="560" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="action1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontFamily=Helvetica;" value="Пользователь переходит в корзину" vertex="1">
+          <mxGeometry height="45" width="180" x="480" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="action1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="action2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontFamily=Helvetica;" value="Нажимает «Оформить заказ»" vertex="1">
+          <mxGeometry height="45" width="180" x="480" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" edge="1" parent="1" source="action1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="action2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="action3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontFamily=Helvetica;" value="Заполняет адрес доставки" vertex="1">
+          <mxGeometry height="45" width="180" x="480" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" edge="1" parent="1" source="action2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="action3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="action4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontFamily=Helvetica;" value="Выбирает способ оплаты" vertex="1">
+          <mxGeometry height="45" width="180" x="480" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" edge="1" parent="1" source="action3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="action4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="decision_payment" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontFamily=Helvetica;" value="Способ оплаты = карта?" vertex="1">
+          <mxGeometry height="70" width="210" x="465" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" edge="1" parent="1" source="action4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="decision_payment">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="action5a" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontFamily=Helvetica;" value="Заполняет данные карты&#xa;(номер, срок, CVV)" vertex="1">
+          <mxGeometry height="55" width="170" x="260" y="487.5" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6a" edge="1" parent="1" source="decision_payment" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Helvetica;" target="action5a" value="Да">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="label_no" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontFamily=Helvetica;" value="Нет" vertex="1">
+          <mxGeometry height="20" width="40" x="690" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="merge_payment" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;aspect=fixed;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="555" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7a" edge="1" parent="1" source="action5a" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="merge_payment">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7b" edge="1" parent="1" source="decision_payment" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="merge_payment">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="450" as="sourcePoint" />
+            <mxPoint x="570" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="action6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontFamily=Helvetica;" value="Нажимает «Подтвердить заказ»" vertex="1">
+          <mxGeometry height="45" width="180" x="480" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" edge="1" parent="1" source="merge_payment" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="action6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="action7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontFamily=Helvetica;" value="Система проверяет наличие&#xa;товаров на складе" vertex="1">
+          <mxGeometry height="55" width="180" x="480" y="645" as="geometry" />
+        </mxCell>
+        <mxCell id="edge9" edge="1" parent="1" source="action6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="action7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="decision_stock" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontFamily=Helvetica;" value="Товаров достаточно?" vertex="1">
+          <mxGeometry height="70" width="210" x="465" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="edge10" edge="1" parent="1" source="action7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="decision_stock">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="action_error" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontFamily=Helvetica;" value="Показать сообщение&#xa;об ошибке" vertex="1">
+          <mxGeometry height="50" width="160" x="250" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="edge11_no" edge="1" parent="1" source="decision_stock" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Helvetica;" target="action_error" value="Нет">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="action_back" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontFamily=Helvetica;" value="Возврат в корзину" vertex="1">
+          <mxGeometry height="45" width="160" x="250" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="edge12" edge="1" parent="1" source="action_error" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="action_back">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="action8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontFamily=Helvetica;" value="Система создаёт заказ в БД" vertex="1">
+          <mxGeometry height="45" width="180" x="480" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="edge11_yes" edge="1" parent="1" source="decision_stock" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Helvetica;" target="action8" value="Да">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="action9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontFamily=Helvetica;" value="Система списывает товары со склада" vertex="1">
+          <mxGeometry height="45" width="180" x="480" y="915" as="geometry" />
+        </mxCell>
+        <mxCell id="edge13" edge="1" parent="1" source="action8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="action9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="action10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontFamily=Helvetica;" value="Система очищает корзину пользователя" vertex="1">
+          <mxGeometry height="45" width="180" x="480" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="edge14" edge="1" parent="1" source="action9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="action10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="action11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontFamily=Helvetica;" value="Перенаправление на страницу успеха" vertex="1">
+          <mxGeometry height="45" width="180" x="480" y="1065" as="geometry" />
+        </mxCell>
+        <mxCell id="edge15" edge="1" parent="1" source="action10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="action11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="action12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontFamily=Helvetica;" value="Отображение чека с деталями заказа" vertex="1">
+          <mxGeometry height="45" width="180" x="480" y="1140" as="geometry" />
+        </mxCell>
+        <mxCell id="edge16" edge="1" parent="1" source="action11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="action12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="20" width="20" x="560" y="1220" as="geometry" />
+        </mxCell>
+        <mxCell id="edge17" edge="1" parent="1" source="action12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="end_error" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="20" width="20" x="320" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="edge18" edge="1" parent="1" source="action_back" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="end_error">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="9CBpUBekTNKXTahsqF2N" name="Страница-2">
+    <mxGraphModel dx="817" dy="683" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="3iOPL7nYOkD8DmONZg5a" name="курсовой4">
+    <mxGraphModel dx="1248" dy="684" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="GEa2iQDBwzbdoI0xAZRN-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Курсовой" vertex="1">
+          <mxGeometry height="80" width="120" x="248" y="107" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
